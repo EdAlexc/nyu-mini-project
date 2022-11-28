@@ -1,18 +1,18 @@
-#README Version of report, please find the full report in specified format in PDF form above. 
+# README Version of report, please find the full report in specified format in PDF form above. 
 
-Deep Learning Mini-Project— Fall 2022
-Written by Eduardo Calzadilla
-New York University - CS-GY 6953 / ECE-GY 7123
+## Deep Learning Mini-Project— Fall 2022
+## Written by Eduardo Calzadilla
+## New York University - CS-GY 6953 / ECE-GY 7123
 
-Abstract
+### Abstract
 
 Machine Learning techniques have been widely implemented in diverse settings. The implementation of such models has become easier due to the open-sourced nature of their de- velopment, which facilitates transfer-learning. There are in- stances in which available pre-trained networks will yield significantly accurate and generalizable results - needing to change only a few top layer parameters. In other instances certain applications might require programmers to alter pre- mademodelsandtrainfromscratch.However,giventhelarge rangeofparametersavailablefortuning-requiringmorethen a few million can lead to incredibly long training periods that are not viable for productionized uses.
 
 In this paper we will explore different pre-designed models and alter their parameters to achieve a high level of accu- racy ( > 80%) for Image classification susing the CIFAR- 10 Image Dataset. Basing our models on the Train CIFAR10 with PyTorch Github Tutorial ([ link to repo),](https://github.com/kuangliu/pytorch-cifar) we will analyze different pre-designed models and then change some of the establishedparameters to increase accuracy until the desired level.
 
-Given initial results based on 2 epochs the GoogleNet and MobileNetV2 structures were selected. Out of these we con- tinued with the GoogleNet and summarize performance re- sults of altered structure in Figure 3. WE FOUND THE HIGHEST ACCURACY WITH THE FOLLOWING PA- RAMETERS
+Given initial results based on 2 epochs the GoogleNet and MobileNetV2 structures were selected. Out of these we con- tinued with the GoogleNet and summarize performance re- sults of altered structure in Figure 3. We found the highest accuracy with ”GoogleNet~~ k5~~ 0~~ 5” and ”GoogleNet~~ 0~~ 5~~ v5” and the following learning parameters: LR = 0.05; and WD = 5E-5. The Test results being 85.01% and 86.31% respectively, and training session taking about 20-30 min to complete. 
 
-Introduction
+#### Introduction
 
 Starting with the pre-designed models found in the Train CI- FAR10 with PyTorch Github Tutorial ([ link to repo)](https://github.com/kuangliu/pytorch-cifar) - and given the accuracy results stated, we chose to do a prelimi- nary test with the following models:
 
@@ -60,7 +60,7 @@ At the end of 8 Epochs for the altered architectures, we did not see accuracy sc
 
 it took about 30-45 min for the full training and testing ses- sions of each of these models using a cuda environment in Amazon SageMaker Studio Lab - the same are not suitable for tasks that require training from scratch. To further iterate on these, we considered changing the LR and WD. Increas- ing the former was expected to speed up the epochs, while decreasing the same should increase accuracy [5]. In terms of weight decay however, we expect an increase to lead to less overfittingif present [6].
 
-Results
+### Results
 
 Choosing the base architecture
 
@@ -108,15 +108,15 @@ Figure 1a: GoogleNet~~ k5~~ 0~~ 5 scores
 
 Figure 1b: GoogleNet~~ 0~~ 5~~ v5 scores
 
-Conclusion
+### Conclusion
 
 We found the highest accuracy scores for both train- ing and testing with the altered GoogleNet models: ”GoogleNet~~ k5~~ 0~~ 5” and ”GoogleNet~~ 0~~ 5~~ v5”, set with a LR = 0.05; and WD = 5E-5. The Test results being 85.01% and 86.31% and each took about 25 min to complete in a cuda environment. This should satisfy our needs for ad-hoc training and testing with limited computing resources. How- ever, to further understand one of our models, we trained ”GoogleNet~~ 0~~ 5~~ v5” for 25 epochs and found that after the 11th Epoch the accuracy scores start to converge at 93% for training and 88% for testing.
 
-Appendix
+### Appendix
 
 Please findthe model architecture in the following Git Repo ([ link to repo)](https://github.com/EdAlexc/nyu-mini-project)
 
-References
+### References
 
 1. Brownlee, J. (2020, September 11). Under- stand the impact of learning rate on neural network performance. MachineLearningMas- tery.com. Retrieved November 27, 2022, from https://machinelearningmastery.com/understand-the- dynamics-of-learning-rate-on-deep-learning-neural- networks/: :text=The
 1. Shivani Sood, Harjeet Singh (2022). Effect of Ker- nel Size in Deep Learning-Based Convolutional Neural
