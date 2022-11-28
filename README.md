@@ -1,7 +1,7 @@
-﻿Deep Learning Mini-Project— Fall 2022
+#README Version of report, please find the full report in specified format in PDF form above. 
 
+Deep Learning Mini-Project— Fall 2022
 Written by Eduardo Calzadilla
-
 New York University - CS-GY 6953 / ECE-GY 7123
 
 Abstract
